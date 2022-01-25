@@ -13,7 +13,6 @@ p{
   border: 1px solid red;
   line-height: 1.5em;
   font-size: 16px;
-
 }
 .container{
   width: 100%;
@@ -36,10 +35,12 @@ h2{
   top: 0;
   left: 0;
   border: 1px solid red;
-  width: 20em;
-  height: 32em;
+  width: 26em;
+  height: 36em;
   background-color: hsl(271, 87%, 51%);
-  border-radius: 0 0 45% 20%;
+  border-bottom-right-radius: 14em;
+  border-bottom-left-radius: 12em;
+  transform: translateX(-4em);
 }
 img-wrapper{
   background-color: blueviolet;
@@ -64,11 +65,103 @@ img{
 .chat-screen {
   width: 15em;
   height: 28em;
-  border: 1px solid red;
-  background: white;
+  background: rgb(235, 235, 235);
   z-index: 2;
   flex: 0 0 auto;
-  border-radius: 25px;
+  border-radius: 1.2em;
+  outline: 8px solid white;
+  box-shadow: 15px 0px 60px rgba(137, 43, 226, 0.308);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.chat-profile {
+  height: 4.5em;
+  width: 100%;
+  background: blueviolet;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1em;
+}
+
+.chat-profile-content {
+  border: 1px solid red;
+  width: 100%;
+  height: 1em;
+  padding: 1em;
+}
+
+.chat-accent {
+  position: absolute;
+  top: 0;
+  width: 60%;
+  height: 2em;
+  background: white;
+  z-index: 5;
+  border-radius: 1.5em;
+  transform: translateY(-50%);
+}
+
+.chat-message {
+  width: 100%;
+  border: 1px solid red;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5em;
+}
+
+.chat-input {
+  width: 100%;
+  height: 4em;
+  border: 1px solid red;
+}
+
+.chat-message::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.chat-message {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.chat-receiver {
+  flex: 0 0 auto;
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+
+.chat-sender {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0.5em;
+  flex: 0 0 auto;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.chat {
+  border: 1px solid red;
+  font-size: 0.65rem;
+  max-width: 60%;
 }
 
 .description {
